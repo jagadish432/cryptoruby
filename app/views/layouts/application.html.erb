@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
+  <title>Crypto Currency Portfolio</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+  <meta name="viewport" content="width=device-width, initial-scale=10, maximum-scale=10, user-scalable=no">
+
 </head>
 <body>
 
-<%= yield %>
+<!--<a href="/" >Home</a> | <a href="home/about">About us</a>-->
+<%= render 'home/navbar' %> <!-- we can use ' or " -->
+<div class="container">
+  <%= yield %>
+</div>
+
 
 </body>
 </html>
