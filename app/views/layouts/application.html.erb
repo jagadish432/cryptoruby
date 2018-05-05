@@ -12,8 +12,9 @@
 <body>
 
 <!--<a href="/" >Home</a> | <a href="home/about">About us</a>-->
-<%= render 'home/navbar' %> <!-- we can use ' or " -->
+<%= render 'home/navbar' %>
 <div class="container">
+  <%= render 'home/flash' %>
   <%= yield %>
 </div>
 

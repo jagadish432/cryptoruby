@@ -1,0 +1,25 @@
+<h3>Search for individual Crypto Currency</h3>
+
+<%= form_tag home_lookup_path, :method => 'POST' do %>
+    <%= text_field_tag 'id', nil, placeholder: 'Enter Cyrpto currency symbol', size:50 %>
+    <%= submit_tag 'Lookup stock status' %>
+<% end %>
+<br/>
+<% @coins %>
+<% @var %>
+<!--<% @temp = 0 %>-->
+<% if @var == "Please enter some crypto currency type" %>
+    <%@var="please enter some value" %>
+    <%= @var %>
+<%end%>
+<% for x in @coins %>
+    <% if @var == x["symbol"] %>
+        Name: <%= x["name"] %> <br/>
+            rank: <%= x["rank"] %> <br/>
+            price: $<%= x["price_usd"] %> <br/>
+            change: <%= x["percent_change_24h"] %> <br/>
+            updated : <%= x["last_updated"] %> <br/>
+    <% end %>
+<%end%>
+
+
